@@ -11,7 +11,7 @@ use super::mass::process_repos;
 
 pub fn quick(
     message: &str,
-    force: bool,
+    _force: bool,
     regex: &str,
     reverse: bool,
     skip_interactive: bool,
@@ -43,7 +43,6 @@ pub fn quick(
             }
 
             loop {
-
                 let result = CustomType::<String>::new(
                     "Do you want to quicken this repo? (y)es/(n)o/(m)ore information:",
                 )
